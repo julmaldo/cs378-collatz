@@ -27,22 +27,22 @@
         -:   22:// collatz_read
         -:   23:// ------------
         -:   24:
-function _Z12collatz_readRKSs called 5 returned 100% blocks executed 80%
-        5:   25:pair<int, int> collatz_read (const string& s) {
-        5:   26:    istringstream sin(s);
+function _Z12collatz_readRKSs called 6 returned 100% blocks executed 80%
+        6:   25:pair<int, int> collatz_read (const string& s) {
+        6:   26:    istringstream sin(s);
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
         -:   27:    int i;
         -:   28:    int j;
-        5:   29:    sin >> i >> j;
+        6:   29:    sin >> i >> j;
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
 call    3 returned 100%
 branch  4 taken 100% (fallthrough)
 branch  5 taken 0% (throw)
-        5:   30:    return make_pair(i, j);}
+        6:   30:    return make_pair(i, j);}
 call    0 returned 100%
 call    1 returned 100%
 call    2 never executed
@@ -51,57 +51,57 @@ call    2 never executed
         -:   33:// collatz_eval
         -:   34:// ------------
         -:   35:
-function _Z12collatz_evalii called 8 returned 100% blocks executed 93%
-        8:   36:int collatz_eval (int i, int j) {
+function _Z12collatz_evalii called 9 returned 100% blocks executed 93%
+        9:   36:int collatz_eval (int i, int j) {
         -:   37:    // <your code>
-        8:   38:int first=0; int last=0;
-        8:   39:if (i<=j) {
+        9:   38:int first=0; int last=0;
+        9:   39:if (i<=j) {
 branch  0 taken 100% (fallthrough)
 branch  1 taken 0%
-        8:   40:	 first = i; last = j;
+        9:   40:	 first = i; last = j;
         -:   41:} 
         -:   42:else { 
     #####:   43:	first = j; last = i;
         -:   44:} 
         -:   45:
-        8:   46:int High = 0;
-      452:   47:for ( int a = first; a <= last; a= a+1)
+        9:   46:int High = 0;
+      454:   47:for ( int a = first; a <= last; a= a+1)
 branch  0 taken 98%
 branch  1 taken 2% (fallthrough)
         -:   48:{
-      444:   49:	int temp = 1; 
-      444:   50:	int b = a;
-    26008:   51:	while (b != 1){
+      445:   49:	int temp = 1; 
+      445:   50:	int b = a;
+    26015:   51:	while (b != 1){
 branch  0 taken 98%
 branch  1 taken 2% (fallthrough)
-    25120:   52:		if (b%2 ==0) {
+    25125:   52:		if (b%2 ==0) {
 branch  0 taken 67% (fallthrough)
 branch  1 taken 33%
-    16850:   53:			b = b/2;
-    16850:   54:			temp++;
+    16854:   53:			b = b/2;
+    16854:   54:			temp++;
         -:   55:		}	
         -:   56:		else {
-     8270:   57:			b=b *3+1;
-     8270:   58:			temp++;
+     8271:   57:			b=b *3+1;
+     8271:   58:			temp++;
         -:   59:		}
         -:   60:	}
         -:   61:
-      444:   62:	if (temp >= High){
+      445:   62:	if (temp >= High){
 branch  0 taken 17% (fallthrough)
 branch  1 taken 83%
-       74:   63:		High = temp;
+       75:   63:		High = temp;
         -:   64:	}
         -:   65:}
-        8:   66:    return High;
+        9:   66:    return High;
         -:   67:}
         -:   68:
         -:   69:// -------------
         -:   70:// collatz_print
         -:   71:// -------------
         -:   72:
-function _Z13collatz_printRSoiii called 5 returned 100% blocks executed 100%
-        5:   73:void collatz_print (ostream& w, int i, int j, int v) {
-        5:   74:    w << i << " " << j << " " << v << endl;}
+function _Z13collatz_printRSoiii called 9 returned 100% blocks executed 100%
+        9:   73:void collatz_print (ostream& w, int i, int j, int v) {
+        9:   74:    w << i << " " << j << " " << v << endl;}
 call    0 returned 100%
 call    1 returned 100%
 call    2 returned 100%
@@ -113,32 +113,32 @@ call    5 returned 100%
         -:   77:// collatz_solve
         -:   78:// -------------
         -:   79:
-function _Z13collatz_solveRSiRSo called 1 returned 100% blocks executed 80%
-        1:   80:void collatz_solve (istream& r, ostream& w) {
-        1:   81:    string s;
+function _Z13collatz_solveRSiRSo called 2 returned 100% blocks executed 80%
+        2:   80:void collatz_solve (istream& r, ostream& w) {
+        2:   81:    string s;
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
-        6:   82:    while (getline(r, s)) {
+        9:   82:    while (getline(r, s)) {
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
 call    3 returned 100%
 branch  4 taken 100% (fallthrough)
 branch  5 taken 0% (throw)
-branch  6 taken 80%
-branch  7 taken 20% (fallthrough)
-        4:   83:        const pair<int, int> p = collatz_read(s);
+branch  6 taken 71%
+branch  7 taken 29% (fallthrough)
+        5:   83:        const pair<int, int> p = collatz_read(s);
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
-        4:   84:        const int            i = p.first;
-        4:   85:        const int            j = p.second;
-        4:   86:        const int            v = collatz_eval(i, j);
+        5:   84:        const int            i = p.first;
+        5:   85:        const int            j = p.second;
+        5:   86:        const int            v = collatz_eval(i, j);
 call    0 returned 100%
 function _GLOBAL__sub_I__Z12collatz_readRKSs called 1 returned 100% blocks executed 100%
 function _Z41__static_initialization_and_destruction_0ii called 1 returned 100% blocks executed 100%
-        8:   87:        collatz_print(w, i, j, v);}}
+       10:   87:        collatz_print(w, i, j, v);}}
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0%

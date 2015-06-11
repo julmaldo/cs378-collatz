@@ -64,6 +64,23 @@ TEST(CollatzFixture, print) {
     collatz_print(w, 1, 10, 20);
     ASSERT_EQ("1 10 20\n", w.str());}
 
+TEST(CollatzFixture, print_2) {
+    ostringstream w;
+    collatz_print(w, 1, 1, 1);
+    ASSERT_EQ("1 1 1\n", w.str());
+}
+
+TEST(CollatzFixture, print_3) {
+    ostringstream w;
+    collatz_print(w, -1, 10, -5);
+    ASSERT_EQ("-1 10 -5\n", w.str());
+}
+
+TEST(CollatzFixture, print_4) {
+    ostringstream w;
+    collatz_print(w, 7, -5, 0);
+    ASSERT_EQ("7 -5 0\n", w.str());
+}
 // -----
 // solve
 // -----
@@ -74,6 +91,12 @@ TEST(CollatzFixture, solve) {
     collatz_solve(r, w);
     ASSERT_EQ("1 10 20\n100 200 125\n201 210 89\n900 1000 174\n", w.str());}
 
+TEST(CollatzFixture, solve_2) {
+    istringstream r("5 5\n");
+    ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("5 5 6\n", w.str());
+}
 /*
 % ls -al /usr/include/gtest/
 ...
