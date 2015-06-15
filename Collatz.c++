@@ -42,6 +42,9 @@ if (i<=j) {
 else { 
 	first = j; last = i;
 } 
+if (last/2 >first){
+	first=last/2;
+}
 
 int High = 0;
 for ( int a = first; a <= last; a= a+1)
@@ -58,6 +61,7 @@ for ( int a = first; a <= last; a= a+1)
 			temp++;
 		}
 	}
+
 
 	if (temp >= High){
 		High = temp;
