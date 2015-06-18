@@ -35,7 +35,7 @@
 #include <string>   // getline, string
 #include <utility>  // make_pair, pair
 
-//#include "Collatz.h"
+
 
 using namespace std;
 
@@ -49,6 +49,39 @@ pair<int, int> collatz_read (const string& s) {
     int j;
     sin >> i >> j;
     return make_pair(i, j);}
+int cycle_cache[1000001];
+
+// -------------
+// cycle_length 
+// -------------
+
+inline int cycle_length(int i)
+{
+    int j = i;
+    int length = 1;
+    if ( i <= 1000000 && cycle_cache[i] != 0) return cycle_cache[i];
+    while (i > 1)
+    {
+        if(i <= 1000000 && cycle_cache[i] != 0)
+        {
+            length += cycle_cache[i] - 1;
+            break;
+        }
+        if(i % 2 == 0)
+        {
+            i >>= 1;
+            ++length;
+        }
+        else 
+        {
+            i = i + (i >> 1) + 1;
+            length += 2;
+        }
+    }
+    cycle_cache[j] = length;
+    return length;
+}
+
 
 // ------------
 // collatz_eval
@@ -58,31 +91,26 @@ int collatz_eval (int i, int j) {
     // <your code>
 int first=0; int last=0;
 if (i<=j) {
-	 first = i; last = j;
+     first = i; last = j;
 } 
 else { 
-	first = j; last = i;
+    first = j; last = i;
 } 
+if (last/2 >first){
+    first=last/2 +1;
+}
 
 int High = 0;
 for ( int a = first; a <= last; a= a+1)
 {
-	int temp = 1; 
-	int b = a;
-	while (b != 1){
-		if (b%2 ==0) {
-			b = b/2;
-			temp++;
-		}	
-		else {
-			b=b *3+1;
-			temp++;
-		}
-	}
 
-	if (temp >= High){
-		High = temp;
-	}
+    int length = cycle_length(a);
+ 
+   
+
+    if (length >= High){
+        High = length;
+    }
 }
     return High;
 }
@@ -128,7 +156,8 @@ void collatz_solve (istream& r, ostream& w) {
 
 #include <iostream> // cin, cout
 
-//#include "Collatz.h"
+
+
 
 // ----
 // main

@@ -47,6 +47,18 @@ TEST(CollatzFixture, read_same_Num) {
     const pair<int, int> p = collatz_read(s);
     ASSERT_EQ( 10, p.first);
     ASSERT_EQ(10, p.second);}
+
+ TEST(CollatzFixture, read_2) {
+    string s("1 1\n");
+    const pair<int, int> p = collatz_read(s);
+    ASSERT_EQ(1, p.first);
+    ASSERT_EQ(1, p.second);}
+
+TEST(CollatzFixture, read_3) {
+    string s("-3 10\n");
+    const pair<int, int> p = collatz_read(s);
+    ASSERT_EQ(-3, p.first);
+    ASSERT_EQ(10, p.second);}
 // ----
 // eval
 // ----
@@ -118,6 +130,13 @@ TEST(CollatzFixture, solve_Reverse) {
     collatz_solve(r, w);
     ASSERT_EQ("10 1 20\n200 100 125\n210 201 89\n1000 900 174\n", w.str());
 }
+
+TEST(CollatzFixture, solve2) {
+    istringstream r("1                            10\n100     200\n201     210\n900          1000\n");
+    ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("1 10 20\n100 200 125\n201 210 89\n900 1000 174\n", w.str());}
+
 /*
 % ls -al /usr/include/gtest/
 ...

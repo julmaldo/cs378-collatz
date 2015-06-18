@@ -1,0 +1,118 @@
+commit f5d08def63b123d9be16234733d65a61d5f761a9
+Author: Julmaldo <julio.a.maldo@gmail.com>
+Date:   Wed Jun 17 13:14:57 2015 -0500
+
+    fixed test cases"
+
+commit 55047ccb2672ee5ee18db31a894396751d1aca6f
+Merge: 30ad168 57fc879
+Author: julmaldo <julio.a.maldo@gmail.com>
+Date:   Wed Jun 17 10:52:12 2015 -0500
+
+    Merge pull request #12 from julmaldo/dev
+    
+    Dev merge
+
+commit 57fc879992b03776ff052310fcf94f12a211ef5f
+Author: julmaldo <julio.a.maldo@gmail.com>
+Date:   Wed Jun 17 10:38:16 2015 -0500
+
+    Delete .nfs000000000408248d0000007a
+
+commit 20d474d1327695e5bc31ab2182fd49fd1c63e17a
+Author: julmaldo <julio.a.maldo@gmail.com>
+Date:   Wed Jun 17 10:38:10 2015 -0500
+
+    Delete .nfs000000000408247c0000007c
+
+commit 0253c304648d4c6612916635cd2255ce48a72041
+Author: julmaldo <julio.a.maldo@gmail.com>
+Date:   Wed Jun 17 10:38:06 2015 -0500
+
+    Delete .nfs000000000408247b0000007b
+
+commit 34c77540c1c1a63eb8701cdd7ec26197b4885410
+Author: julmaldo <julio.a.maldo@gmail.com>
+Date:   Wed Jun 17 10:38:01 2015 -0500
+
+    Delete .nfs000000000104223600000079
+
+commit 30fd8c2d2fa3a8ec08e74f1530af56dd4e75ef16
+Author: julmaldo <julio.a.maldo@gmail.com>
+Date:   Wed Jun 17 10:37:54 2015 -0500
+
+    Delete .nfs000000000104223400000077
+
+commit 806940e865cb9245e5e0e9c89b3c33d6b3bc393b
+Author: julmaldo <julio.a.maldo@gmail.com>
+Date:   Wed Jun 17 10:37:39 2015 -0500
+
+    Delete .nfs000000000104223300000078
+    
+    not sure what this is
+
+commit 395256c8214e050f2697740cb3a8ba80ef7284e9
+Author: Julmaldo <julio.a.maldo@gmail.com>
+Date:   Wed Jun 17 10:31:58 2015 -0500
+
+    hundred tests
+
+commit 96d11be434042f2cc50f947f491951d08f166a8d
+Author: Julmaldo <julio.a.maldo@gmail.com>
+Date:   Mon Jun 15 13:26:52 2015 -0500
+
+    optimized code without cache
+
+commit 89d6e256cb6c40de3f9969c13883d2012b3025f1
+Author: Julmaldo <julio.a.maldo@gmail.com>
+Date:   Thu Jun 11 17:25:18 2015 -0500
+
+    basic sphere acceptence
+
+commit 60e610654ac2bab4759dcd7dff1f05364c1a9383
+Author: Julmaldo <julio.a.maldo@gmail.com>
+Date:   Wed Jun 10 22:17:39 2015 -0500
+
+    added more tests
+
+commit acee9109fdde045c0f26487fab06d838df1edb26
+Author: Julmaldo <julio.a.maldo@gmail.com>
+Date:   Wed Jun 10 22:00:33 2015 -0500
+
+    with simpliest answer
+
+commit c531e5aa327be4f4fa636eab8ef9ac067daa4d8a
+Author: Julmaldo <julio.a.maldo@gmail.com>
+Date:   Wed Jun 10 14:08:59 2015 -0500
+
+    fixed tests
+
+commit 108c6813c10ec2e694d3a13ff256ac0403967641
+Author: Julmaldo <julio.a.maldo@gmail.com>
+Date:   Tue Jun 9 23:22:29 2015 -0500
+
+    start make test
+
+commit 6bf7d27b875332fc0362c82cd482dd9cb7e18ed7
+Author: Julmaldo <julio.a.maldo@gmail.com>
+Date:   Tue Jun 9 21:02:38 2015 -0500
+
+    after make test
+
+commit 30ad1681258732b5afc6264f054bf4732599f3f2
+Author: Julmaldo <julio.a.maldo@gmail.com>
+Date:   Tue Jun 9 19:40:53 2015 -0500
+
+    another commit
+
+commit a53dbbcd1a26b856edfdb648979caf72898f00bf
+Author: Julio Maldonado <julio.a.maldo@gmail.com>
+Date:   Tue Jun 9 19:11:39 2015 -0500
+
+    first commit
+
+commit 3bb3341a1f47f2e44ce6fc0a8c7fde7b2d555732
+Author: julmaldo <julio.a.maldo@gmail.com>
+Date:   Mon Jun 8 18:00:41 2015 -0500
+
+    Initial commit
