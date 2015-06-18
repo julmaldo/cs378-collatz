@@ -1,9 +1,9 @@
 FILES :=                              \
     .travis.yml                       \
-    collatz-tests/JAM7686-RunCollatz.in   \
-    collatz-tests/JAM7686-RunCollatz.out  \
-    collatz-tests/JAM7686-TestCollatz.c++ \
-    collatz-tests/JAM7686-TestCollatz.out \
+    collatz-tests/jam7686-RunCollatz.in   \
+    collatz-tests/jam7686-RunCollatz.out  \
+    collatz-tests/jam7686-TestCollatz.c++ \
+    collatz-tests/jam7686-TestCollatz.out \
     Collatz.c++                       \
     Collatz.h                         \
     Collatz.log                       \

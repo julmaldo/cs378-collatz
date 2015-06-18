@@ -1,5 +1,5 @@
 
-//#define _cashe 
+#define _cashe //comment out to run without cache 
 
 // ----------------------------
 // projects/collatz/Collatz.c++
@@ -32,7 +32,7 @@ pair<int, int> collatz_read (const string& s) {
     sin >> i >> j;
     return make_pair(i, j);}
 
-int cycle_cache[1000001];
+int cycle_cache[1000001]; //init cache
 
 // -------------
 // cycle_length 
@@ -40,6 +40,7 @@ int cycle_cache[1000001];
 
 inline int cycle_length(int i)
 {
+	//checks cache for value and returns value if present, else solves for length and puts in cache
     int j = i;
     int length = 1;
     if ( i <= 1000000 && cycle_cache[i] != 0) return cycle_cache[i];
@@ -65,6 +66,7 @@ inline int cycle_length(int i)
     return length;
 }
 
+// solves for collatz without cache
 inline int reg_cycle_length(int i)
 {
 int temp = 1; 
@@ -87,31 +89,31 @@ while (i != 1){
 
 int collatz_eval (int i, int j) {
     // <your code>
-int first=0; int last=0;
-if (i<=j) {
-	 first = i; last = j;
-} 
-else { 
+	int first=0; int last=0;
+	if (i<=j) {
+	first = i; last = j;
+	} 
+	else { 
 	first = j; last = i;
-} 
-if (last/2 >first){
-	first=last/2 +1;
-}
-
-int High = 0;
-for ( int a = first; a <= last; a= a+1)
-{
-	#ifdef _cashe 
-	int length = cycle_length(a);
-    #else 
-    int length = reg_cycle_length(a);
-    #endif
-
-	if (length >= High){
-		High = length;
+	}	 
+	if (last/2 >first){
+		first=last/2 +1;
 	}
-}
-    return High;
+
+	int High = 0;
+	for ( int a = first; a <= last; a= a+1)
+	{
+		#ifdef _cashe 
+		int length = cycle_length(a);
+ 	 	#else 
+		int length = reg_cycle_length(a);
+		#endif
+
+		if (length >= High){
+			High = length;
+		}	
+	}	
+	return High;
 }
 
 // -------------
